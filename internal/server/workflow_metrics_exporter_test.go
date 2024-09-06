@@ -14,7 +14,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cpanato/github_actions_exporter/internal/server"
+	"github.com/fernride/github_actions_exporter/internal/server"
 	"github.com/go-kit/log"
 	"github.com/google/go-github/v59/github"
 	"github.com/stretchr/testify/assert"
