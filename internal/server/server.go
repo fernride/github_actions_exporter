@@ -50,7 +50,7 @@ func NewServer(logger log.Logger, opts Opts) *Server {
 	billingExporter := NewBillingMetricsExporter(logger, opts)
 	err := billingExporter.StartOrgBilling(context.TODO())
 	if err != nil {
-		_ = level.Info(logger).Log("msg", fmt.Sprintf("not exporting org billing: %v", err))
+		_ = level.Info(logger).Log("msg", fmt.Sprintf("not asd;lfj exporting org billing: %v", err))
 	}
 	err = billingExporter.StartUserBilling(context.TODO())
 	if err != nil {
