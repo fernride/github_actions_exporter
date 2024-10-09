@@ -5,7 +5,7 @@ DOCS_IMAGE_VERSION="v1.14.2"
 .PHONY: lint
 lint:
 	@echo ">> running golangci-lint"
-	golangci-lint run ./...
+	golangci-lint run -v ./...
 
 .PHONY: test
 test:
