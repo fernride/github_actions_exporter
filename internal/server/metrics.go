@@ -88,7 +88,6 @@ func init() {
 	prometheus.MustRegister(totalPaidMinutesActions)
 	prometheus.MustRegister(totalMinutesUsedByHostTypeActions)
 	prometheus.MustRegister(workflowQueueSize)
-
 }
 
 type WorkflowObserver interface {

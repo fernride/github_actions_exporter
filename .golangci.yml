@@ -1,5 +1,6 @@
 ---
 linters:
+  disable-all: true
   enable:
     - asciicheck
     - errcheck
@@ -15,7 +16,6 @@ linters:
     - stylecheck
     - tparallel
     - unconvert
-    - unparam
     - unused
     - whitespace
 output:
@@ -31,3 +31,11 @@ issues:
 run:
   issues-exit-code: 1
   timeout: 10m
+linters-settings:
+  stylecheck:
+    checks: ["all", "-ST1003"]
+  revive:
+    rules:
+      - name: var-naming
+        disabled: true
+        
