@@ -74,6 +74,13 @@ var (
 	},
 		[]string{},
 	)
+
+	selfHostedRunnerCount = prometheus.NewGaugeVec(prometheus.GaugeOpts{
+		Name: "self_hosted_runner_count",
+		Help: "Number of registered self-hosted runners.",
+	},
+		[]string{"org", "busy", "labels"},
+	)
 )
 
 func init() {
@@ -88,6 +95,7 @@ func init() {
 	prometheus.MustRegister(totalPaidMinutesActions)
 	prometheus.MustRegister(totalMinutesUsedByHostTypeActions)
 	prometheus.MustRegister(workflowQueueSize)
+	prometheus.MustRegister(selfHostedRunnerCount)
 }
 
 type WorkflowObserver interface {
