@@ -59,7 +59,6 @@ func (c *ApiWorkflowMetricsExporter) StartWorkflowApiPolling(ctx context.Context
 	return nil
 }
 
-// CollectActionBilling collect the action billing.
 func (c *ApiWorkflowMetricsExporter) collectWorkflowApiPolling(ctx context.Context) {
 	queuedWorkflowRuns, _, err := c.GHClient.Actions.ListRepositoryWorkflowRuns(ctx, c.Opts.GitHubOrg, c.Opts.GitHubRepo, &github.ListWorkflowRunsOptions{
 		ListOptions: github.ListOptions{
